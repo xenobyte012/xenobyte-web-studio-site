@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xenobytewebstudio.co.za/sitemap.xml
