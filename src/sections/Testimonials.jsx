@@ -1,128 +1,251 @@
-﻿import React from 'react'
-import image_1 from '../images/image-1.webp'
+﻿import React from "react";
+import image_1 from "../images/image-1.webp";
 import image_2 from "../images/image-2.webp";
-import profileImage_3 from '../images/profile-img-3.webp'
+import profileImage_3 from "../images/profile-img-3.webp";
+import googleImage from "../images/google-image.webp";
 
-import star from '../images/star.webp'
-import googleImage from '../images/google-image.webp'
+import { FaStar, FaQuoteLeft } from "react-icons/fa";
 
 function Testimonials() {
   const data = [
     {
-      name: "Michael Johnson – Business Owne",
+      name: "Tshepo Modisa",
+
       review:
-        "Working with Clement was a great experience. The website he built for my business looks professional, loads fast, and helped us attract more customers online.",
-      profilePicture:image_1,
-      date: "2 week ago ",
+        "Working with Clement was a great experience. The website he built for my business looks professional, loads fast and helped us attract more customers.",
+
+      profilePicture: image_1,
+
+      date: "2 weeks ago",
     },
+
     {
-      name: "Sarah Williams – Marketing Manager",
+      name: "Ephraim Mucale",
+
       review:
-        "The whole process was smooth and professional. Our website now looks modern and easy to use, and our customers love it.",
+        "The whole process was smooth and professional. Our website now looks modern and easy to use.",
+
       profilePicture: image_2,
+
       date: "2 months ago",
     },
+
     {
-      name: "David Smith – Startup Founder",
+      name: " Anjali Govender",
+
       review:
-        "I’m really impressed with the quality of the website. It perfectly represents our brand and has helped us establish a strong online presence.",
+        "The website perfectly represents our brand and strengthened our online presence.",
+
       profilePicture: profileImage_3,
+
       date: "4 months ago",
     },
   ];
 
-
-
   return (
-    <section className="bg-slate-100 flex flex-col justify-center text-center  py-10">
-      <div className="justify-center flex flex-col">
-        <h1 className="text-heading-1 leading-tight text-center text-4xl font-bold  px-6">
-          What Our Client have to say
-        </h1>
-        <p className="text-xl text-center text-sub-heading-1  pt-4 px-6">
-          business looks professional, loads fast, and helped us
-        </p>
-      </div>
+    <section
+      className="
+      py-28
+      bg-gradient-to-b
+      from-slate-50
+      to-white"
+    >
+      <div
+        className="
+        max-w-7xl
+        mx-auto
+        px-6"
+      >
+        {/* Heading */}
 
-      <div className="pt-10 flex px-4 md:flex-row flex-col gap-6 justify-center mx-auto">
-        {data.map((data, index) => (
-          <div className="flex flex-col text-base  w-90 text-left shadow-2xl rounded-2xl p-4 relative bg-background-1">
-            <div className="flex flex-row gap-4 pb-3">
-              <div>
-                <img
-                  alt="profile picture"
-                  loading="lazy"
-                  key={index}
-                  src={data.profilePicture}
-                  className="object-cover w-12 h-12 rounded-full "
-                />
-              </div>
-              <div>
-                <div className="flex flex-row justify-between gap-8 align-center items-center ">
-                  <div
-                    className="font-semibold text-sub-heading-1 text-lg w-60"
-                    key={index}
-                  >
-                    Name: {data.name}
-                  </div>
-                </div>
+        <div className="text-center">
+          <div
+            className="
+            inline-block
+            px-5
+            py-2
+            rounded-full
 
-                <div className="text-gray-600 ">{data.date}</div>
-              </div>
-              <div className="absolute right-5 top-5">
-                <img
-                  loading="lazy"
-                  alt="profile picture's"
-                  src={googleImage}
-                  className="object-cover w-7 h-7 rounded-full justify-end"
-                />
-              </div>
-            </div>
-            <div className="flex flex-row gap-1 pb-3">
-              <img
-                alt="star image"
-                loading="lazy"
-                src={star}
-                className="w-4 h-4"
-              />
-              <img
-                alt="star image"
-                loading="lazy"
-                src={star}
-                className="w-4 h-4"
-              />
-              <img
-                alt="star image"
-                loading="lazy"
-                src={star}
-                className="w-4 h-4"
-              />
-              <img
-                alt="star image"
-                loading="lazy"
-                src={star}
-                className="w-4 h-4"
-              />
-              <img
-                alt="star image"
-                loading="lazy"
-                src={star}
-                className="w-4 h-4"
-              />
-            </div>
-            <div>
-              <p
-                className="wrap-break leading-relaxed  text-normal-text-1"
-                key={index}
-              >
-                {data.review}
-              </p>
-            </div>
+            bg-blue-500/10
+
+            text-blue-500
+
+            mb-6"
+          >
+            Testimonials
           </div>
-        ))}
+
+          <h1
+            className="
+            text-5xl
+            font-bold"
+          >
+            What Our Clients Say
+          </h1>
+
+          <p
+            className="
+            mt-5
+            text-gray-500
+            max-w-2xl
+            mx-auto"
+          >
+            Trusted by businesses looking for modern, fast and professional
+            websites.
+          </p>
+        </div>
+
+        {/* Cards */}
+
+        <div
+          className="
+          grid
+          md:grid-cols-2
+          lg:grid-cols-3
+
+          gap-10
+
+          mt-20"
+        >
+          {data.map((testimonial, index) => (
+            <div
+              key={index}
+              className="
+                relative
+
+                bg-white
+
+                rounded-3xl
+
+                p-8
+
+                shadow-xl
+
+                hover:-translate-y-3
+
+                transition
+
+                duration-500"
+            >
+              {/* Quote */}
+
+              <FaQuoteLeft
+                className="
+                  text-blue-500
+
+                  text-4xl
+
+                  absolute
+
+                  right-8
+
+                  top-8"
+              />
+
+              {/* User */}
+
+              <div
+                className="
+                  flex
+                  gap-4
+                  items-center"
+              >
+                <img
+                  src={testimonial.profilePicture}
+                  alt={testimonial.name}
+                  className="
+                    w-16
+                    h-16
+
+                    rounded-full
+
+                    object-cover"
+                />
+
+                <div>
+                  <h3
+                    className="
+                      font-bold"
+                  >
+                    {testimonial.name}
+                  </h3>
+
+                  <p
+                    className="
+                      text-sm
+
+                      text-gray-500"
+                  >
+                    {testimonial.date}
+                  </p>
+                </div>
+              </div>
+
+              {/* Stars */}
+
+              <div
+                className="
+                  flex
+
+                  gap-1
+
+                  mt-6
+
+                  text-yellow-400"
+              >
+                {[...Array(5)].map((_, i) => (
+                  <FaStar key={i} />
+                ))}
+              </div>
+
+              {/* Review */}
+
+              <p
+                className="
+                  mt-6
+
+                  leading-8
+
+                  text-gray-600"
+              >
+                "{testimonial.review}"
+              </p>
+
+              {/* Google badge */}
+
+              <div
+                className="
+                  mt-8
+
+                  flex
+
+                  items-center
+
+                  gap-3"
+              >
+                <img
+                  src={googleImage}
+                  alt="Google"
+                  className="
+                    w-8
+                    h-8"
+                />
+
+                <span
+                  className="
+                    text-sm
+
+                    text-gray-500"
+                >
+                  Verified Google Review
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
 }
 
-export default Testimonials
+export default Testimonials;
