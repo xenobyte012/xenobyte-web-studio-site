@@ -1,78 +1,224 @@
-﻿import React from 'react'
-import ourGoalsImage from '../images/goals.webp'
+﻿import React from "react";
+import ourGoalsImage from "../images/goals.webp";
+import { Rocket, Smartphone, Palette, Zap } from "lucide-react";
 
 function GoalSection() {
-  
+  const features = [
+    {
+      title: "High Performance Websites",
+
+      desc: "Fast loading websites optimized for SEO, user experience and conversions.",
+
+      icon: <Zap size={28} />,
+    },
+
+    {
+      title: "Custom Business Design",
+
+      desc: "Every website is built around your brand identity and target audience.",
+
+      icon: <Palette size={28} />,
+    },
+
+    {
+      title: "Responsive On All Devices",
+
+      desc: "Perfect experience across phones, tablets and desktop devices.",
+
+      icon: <Smartphone size={28} />,
+    },
+
+    {
+      title: "Built To Generate Customers",
+
+      desc: "Designed to turn visitors into customers using strategy and conversion principles.",
+
+      icon: <Rocket size={28} />,
+    },
+  ];
+
   return (
     <section
       id="about"
-      className="bg-background-2 text-normal-text-2 py-10  px-4 flex  justify-center text-center"
-    >
-      <div className="text-left">
-        <h1 className="text-4xl font-bold text-center pb-8 pt-6 text-gray-50 leading-tight">
-          Our Mission & What We Focus On
-        </h1>
-        <p className="text-3xl font-bold text-sub-heading-2 ">Our Mission</p>
+      className="
+      py-28
 
-        <p className="text-lg pt-2 ">
-          Our goal is to build high-quality websites that help businesses grow,
-          attract customers, and create a strong online presence.
-        </p>
-        <div className="grid md:grid-cols-2 gap-6 pt-6">
-          <div className="flex flex-col gap-6 text-left ">
-            <div>
-              <h1 className="text-xl font-semibold pb-2 text-subheading-2">
-                ⚡High-Performance Websites
-              </h1>
-              <p className="pl-4 text-gray-300">
-                We build fast and optimized websites that load quickly and run
-                smoothly. A high-performance website keeps visitors engaged and
-                helps improve search engine rankings.
-              </p>
-            </div>
-            <div>
-              <h1 className="text-xl font-semibold pb-2 text-subheading-2">
-                🎨Custom Design for Your Business
-              </h1>
-              <p className="pl-4 text-gray-300">
-                Every business is unique, and your website should reflect that.
-                We create custom designs tailored to your brand, industry, and
-                target audience.
-              </p>
-            </div>
-            <div>
-              <h1 className="text-xl font-semibold pb-2 text-subheading-2">
-                📱Responsive on All Devices
-              </h1>
-              <p className="pl-4 text-300">
-                Your website will look and work perfectly on desktops, tablets,
-                and smartphones, ensuring every visitor has a great experience
-                no matter the device.
-              </p>
-            </div>
-            <div className="pt-2">
-              <h1 className="text-xl font-semibold pb-2 text-subheading-2">
-                🚀Built to Attract Customers
-              </h1>
-              <p className="pl-4 text-300">
-                Our websites are designed with strategy in mind, helping turn
-                visitors into potential customers through clear structure and
-                strong calls to action.
-              </p>
-            </div>
+      bg-background-2
+
+      text-white"
+    >
+      <div
+        className="
+        max-w-7xl
+        mx-auto
+
+        px-6"
+      >
+        {/* Heading */}
+
+        <div
+          className="
+          text-center
+          mb-20"
+        >
+          <div
+            className="
+            inline-block
+
+            px-5
+            py-2
+
+            rounded-full
+
+            bg-blue-500/10
+
+            border
+
+            border-blue-500/20
+
+            text-blue-400
+
+            mb-5"
+          >
+            About Us
           </div>
-          <div className="hidden md:block  pt-2 ">
-            <img
-              loading="lazy"
-              src={ourGoalsImage}
-              alt="our goal images"
-              className="rounded-xl object-cover shadow-2xl w-full"
-            />
+
+          <h1
+            className="
+            text-5xl
+            md:text-6xl
+
+            font-bold"
+          >
+            Our Mission
+          </h1>
+
+          <p
+            className="
+            mt-6
+
+            max-w-3xl
+
+            mx-auto
+
+            text-gray-400
+
+            text-lg"
+          >
+            We create modern websites designed to help businesses grow, build
+            trust and attract more customers online.
+          </p>
+        </div>
+
+        <div
+          className="
+          flex justify-center
+
+          gap-16
+
+          items-center"
+        >
+          <div
+            className="
+              grid
+  grid-cols-1
+  lg:grid-cols-2
+
+            gap-8"
+          >
+            {features.map((item, index) => (
+              <div
+                key={index}
+                className="
+                  flex
+
+                  gap-5
+
+                  bg-gray-100
+
+                  p-6
+
+                  rounded-2xl
+
+                  hover:-translate-y-2
+
+                  transition"
+              >
+                <div
+                  className="
+                    text-blue-500"
+                >
+                  {item.icon}
+                </div>
+
+                <div>
+                  <h2
+                    className="
+                      text-xl
+                      text-gray-600
+                      font-bold"
+                  >
+                    {item.title}
+                  </h2>
+
+                  <p
+                    className="
+                      text-gray-500
+
+                      mt-3
+
+                      leading-7"
+                  >
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
+        </div>
+
+        {/* Bottom CTA */}
+
+        <div
+          className="
+          mt-20
+
+          text-center"
+        >
+          <h3
+            className="
+            text-3xl
+
+            font-bold"
+          >
+            Ready to grow your business online?
+          </h3>
+
+          <a
+            href="#contact"
+            className="
+            inline-block
+
+            mt-8
+
+            px-8
+
+            py-4
+
+            bg-blue-600
+
+            rounded-full
+
+            hover:bg-blue-700
+
+            transition"
+          >
+            Start Your Project
+          </a>
         </div>
       </div>
     </section>
   );
 }
 
-export default GoalSection
+export default GoalSection;
