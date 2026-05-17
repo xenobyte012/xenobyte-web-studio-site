@@ -1,63 +1,238 @@
 import React from "react";
+
+import { Palette, TrendingUp, Brain, Zap, ShieldCheck } from "lucide-react";
+
 function WhyDifferent() {
-// Data for the reasons (this keeps the component clean and scalable)
   const reasons = [
-  {
-    title: "Custom Design for Your Business",
-    text: "Every website is designed specifically for your brand so your business stands out from competitors using generic templates.",
-    icon: "🎨",
-  },
-  {
-    title: "Built to Support Business Growth",
-    text: "Our websites are structured to help turn visitors into customers through clearcalls-to-action and strategic layouts.",
-    icon: "📈",
-  },
-  {
-  title: "Strategic Planning",
-  text: "Before development begins, we plan the pages, structure, and user experience to ensure the website achieves your business goals.",
-  icon: "🧠",
-  },
-  {
-  title: "Fast Performance",
-  text: "We build lightweight and optimized websites that load quickly and provide a smoothexperience for visitors.",
-  icon: "⚡",
-  },
-  {
-  title: "Designed to Build Trust",
-  text: "Clean layouts and modern design help your business look professional and trustworthy to new customers.",
-  icon: "🤝",
-  },
+    {
+      title: "Custom Design For Your Business",
+
+      text: "Every website is designed specifically around your brand so your business stands out.",
+
+      icon: <Palette size={30} />,
+    },
+
+    {
+      title: "Built To Support Growth",
+
+      text: "Our websites help turn visitors into customers through strategic layouts.",
+
+      icon: <TrendingUp size={30} />,
+    },
+
+    {
+      title: "Strategic Planning",
+
+      text: "We carefully plan structure, pages and user experience before development begins.",
+
+      icon: <Brain size={30} />,
+    },
+
+    {
+      title: "Fast Performance",
+
+      text: "Optimized websites that load quickly and keep visitors engaged.",
+
+      icon: <Zap size={30} />,
+    },
+
+    {
+      title: "Designed To Build Trust",
+
+      text: "Professional designs that make businesses appear credible and trustworthy.",
+
+      icon: <ShieldCheck size={30} />,
+    },
   ];
-return (
-  <section className="bg-background-2 py-20 px-6">
-    <div className="max-w-6xl mx-auto text-center">
-     
-      <h2 className="text-4xl font-bold mb-4 text-normal-text-2 leading-tight">
-        What Makes Our Service Different
-      </h2>
-      
-      <p className="text-sub-heading-2 text-xl max-w-2xl mx-auto mb-12">
-        We focus on creating websites that not only look great but also help
-        businesses attract customers and grow online.
-      </p>
-      
-      <div className="grid md:grid-cols-3 gap-8">
-        {reasons.map((reason, index) => (
+
+  return (
+    <section
+      className="
+      py-28
+
+      bg-background-2
+
+      text-slate-700"
+    >
+      <div
+        className="
+        max-w-7xl
+
+        mx-auto
+
+        px-6"
+      >
+        {/* Heading */}
+
+        <div className="text-center">
           <div
-            key={index}
-            className="bg-sub-heading-1 p-6 rounded-xl shadow-xl hover:shadow-2xl transition"
+            className="
+            inline-block
+
+            px-5
+            py-2
+
+            rounded-full
+
+            bg-blue-500/10
+
+            border
+
+            border-blue-500/20
+
+            text-blue-400
+
+            mb-5"
           >
-            {/* Icon */}
-            <div className="text-4xl mb-4">{reason.icon}</div>
-            {/* Title */}
-            <h3 className="text-xl text-sub-heading-2 font-semibold mb-2">{reason.title}</h3>
-            {/* Description */}
-            <p className="text-normal-text-2">{reason.text}</p>
+            Why Choose Us
           </div>
-        ))}
+
+          <h2
+            className="
+            text-5xl
+            md:text-6xl
+
+            font-bold
+
+            leading-tight"
+          >
+            What Makes Us Different
+          </h2>
+
+          <p
+            className="
+            mt-6
+
+            text-gray-300
+
+            text-lg
+
+            max-w-3xl
+
+            mx-auto"
+          >
+            We create websites designed to grow businesses, attract customers
+            and build trust.
+          </p>
+        </div>
+
+        {/* Cards */}
+
+        <div
+          className="
+          grid
+
+          md:grid-cols-2
+
+          lg:grid-cols-3
+
+          gap-8
+
+          mt-20"
+        >
+          {reasons.map((reason, index) => (
+            <div
+              key={index}
+              className="
+                bg-background-1
+
+                p-6
+
+                rounded-3xl
+
+                shadow-lg
+
+                hover:-translate-y-3
+
+                hover:shadow-2xl
+
+                transition
+
+                duration-500"
+            >
+              {/* Icon */}
+              <div className="flex flex-row gap-4 items-center">
+                <div
+                  className="
+                  w-16
+                  h-16
+
+                  flex
+
+                  items-center
+
+                  justify-center
+
+                  rounded-2xl
+
+                  bg-blue-500/10
+
+                  text-blue-500
+
+                  mb-6"
+                >
+                  {reason.icon}
+                </div>
+
+                {/* Title */}
+
+                <h3
+                  className="
+                  text-2xl
+
+                  font-bold
+
+                  mb-4"
+                >
+                  {reason.title}
+                </h3>
+              </div>
+
+              {/* Text */}
+
+              <p
+                className="
+                  text-gray-500
+
+                  leading-8"
+              >
+                {reason.text}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA */}
+
+        <div
+          className="
+          text-center
+
+          mt-20"
+        >
+          <a
+            href="#contact"
+            className="
+            inline-block
+
+            px-8
+            py-4
+            text-gray-100
+
+            bg-blue-600
+
+            rounded-full
+
+            hover:bg-blue-700
+
+            transition"
+          >
+            Start Your Project
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
 }
+
 export default WhyDifferent;

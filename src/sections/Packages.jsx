@@ -1,4 +1,5 @@
 import React from "react";
+import { Check, Star } from "lucide-react";
 
 function Packages() {
   const scrollToContact = () => {
@@ -6,162 +7,321 @@ function Packages() {
       behavior: "smooth",
     });
   };
+
+  const plans = [
+    {
+      name: "Bronze",
+
+      price: "1000",
+
+      popular: false,
+
+      features: [
+        "Up to 2 pages",
+
+        "3 sections per page",
+
+        "Professional design",
+
+        "Mobile responsive",
+
+        "Contact form",
+
+        "Basic SEO",
+
+        "Fast loading",
+
+        "1 revision",
+      ],
+    },
+
+    {
+      name: "Silver",
+
+      price: "2000",
+
+      popular: true,
+
+      features: [
+        "Up to 3 pages",
+
+        "Custom design",
+
+        "Responsive all devices",
+
+        "Social media integration",
+
+        "Google Maps",
+
+        "SEO structure",
+
+        "Performance optimization",
+
+        "3 revisions",
+      ],
+    },
+
+    {
+      name: "Gold",
+
+      price: "3000",
+
+      popular: false,
+
+      features: [
+        "Up to 6 pages",
+
+        "Premium design",
+
+        "Blog setup",
+
+        "Advanced SEO",
+
+        "Priority support",
+
+        "Portfolio section",
+
+        "Performance optimization",
+
+        "5 revisions",
+      ],
+    },
+  ];
+
   return (
-    <section id="packages" className="bg-background-1 mx-auto flex flex-col justify-center text-center  py-10 px-4 text-sub-heading-1">
-      <div className="justify-center flex flex-col">
-        <h1 className="text-heading-1 leading-tight text-center text-4xl font-bold">
-          Why Businesses Choose Us
-        </h1>
-        <p className="text-xl text-center  max-w-2xl mx-auto pt-4">
-          We focus on delivering high-quality websites that help businesses
-          stand out, attract customers, and grow online.
-        </p>
-        <p className=" text-slate-900  text-2xl font-bold pt-6">
-          Website Design Packages
-        </p>
-        {/* <p className="text-lg text-center   pt-2">
-          Flexible website packages to fit any business size and budget. Choose
-          the right plan below and start building your online presence today.
-        </p> */}
+    <section
+      id="packages"
+      className="
+      py-28
 
-        <div className="mx-auto flex flex-col md:flex-row justify-center gap-10 pt-8">
-          <div>
-            <div className="bg-gray-50 md:w-67 w-77 shadow-2xl gap-2 rounded-xl rounded-t-xl">
-              <div className="bg-slate-900 text-white text-2xl p-3 font-medium rounded-t-xl py-5">
-                Bronze
-              </div>
-              <div className="py-4 p-4">
-                <h1 className=" text-5xl font-medium text-center py-3 ">
-                  <span className="text-xl align-top text-heading-1 font-bold">
-                    R
-                  </span>
-                  1000
-                </h1>
-                <div className="text-left py-1">
-                  ✅ Up to 2 pages(Home, About or Contact)
-                </div>
-                <div className="text-left py-1">
-                  ✅ Up to 3 sections per page
-                </div>
-                <div className="text-left py-1">✅ Clean professional</div>
-                <div className="text-left py-1">
-                  ✅ Mobile responsive layout
-                </div>
-                <div className="text-left py-1">
-                  ✅ Contact form integration
-                </div>
-                <div className="text-left py-1">✅ Basic SEO setup </div>
-                <div className="text-left py-1">✅ Fast loading website</div>
-                <div className="text-left py-1">✅ 1 round of revision</div>
+      bg-background-1"
+    >
+      <div
+        className="
+        max-w-7xl
 
-                <div>
-                  <button
-                    onClick={scrollToContact}
-                    className="bg-blue-600 py-2 px-4 shadow-2xl text-lg  rounded-2xl text-white hover:bg-blue-700 my-4"
-                  >
-                    Contact Us
-                  </button>
-                </div>
-              </div>
-            </div>
+        mx-auto
+
+        px-6"
+      >
+        {/* Heading */}
+
+        <div className="text-center">
+          <div
+            className="
+            inline-block
+
+            px-5
+            py-2
+
+            rounded-full
+
+            bg-blue-500/10
+
+            text-blue-500
+
+            mb-5"
+          >
+            Pricing
           </div>
-          <div>
-            <div className="bg-gray-50 md:w-67 w-77 shadow-2xl gap-2 rounded-xl rounded-t-xl">
-              <div className="bg-slate-900 text-white text-2xl p-3 font-medium rounded-t-xl py-5">
-                Silver
-              </div>
-              <div className="py-4 p-4">
-                <h1 className=" text-5xl font-medium text-center py-3 ">
-                  <span className="text-xl align-top text-heading-1 font-bold">
-                    R
-                  </span>
-                  2000
-                </h1>
-                <div className="text-left py-1">✅ Up to 3 pages</div>
-                <div className="text-left py-1">
-                  ✅ Up rto 4-5 section per page
-                </div>
-                <div className="text-left py-1">
-                  ✅ Fully custom website design
-                </div>
-                <div className="text-left py-1">
-                  ✅ Mobile responsive on all devices
-                </div>
-                <div className="text-left py-1">
-                  ✅ Contact form and call-to-action sections
-                </div>
-                <div className="text-left py-1">
-                  ✅ Social media integration
-                </div>
-                <div className="text-left py-1">✅ Google maps integration</div>
-                <div className="text-left py-1">✅ SEO-friendly structure</div>
-                <div className="text-left py-1">
-                  ✅ Performance optimazation
-                </div>
-                <div className="text-left py-1">✅ 3 rounds of revision</div>
 
-                <div>
-                  <button
-                    onClick={scrollToContact}
-                    className="bg-blue-600  shadow-2xl py-2 px-4 rounded-2xl hover:bg-blue-700 my-4 text-lg  text-white"
-                  >
-                    Contact Us
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="bg-gray-50 md:w-67 w-77 shadow-2xl gap-2 rounded-xl rounded-t-xl">
-              <div className="bg-slate-900 text-white text-2xl p-3 font-medium rounded-t-xl py-5">
-                Gold
-              </div>
-              <div className="py-4 p-4">
-                <h1 className=" text-5xl font-medium text-center py-3 ">
-                  <span className="text-xl align-top text-heading-1 font-bold">
-                    R
-                  </span>
-                  3000
-                </h1>
-                <div className="text-left py-1">✅ Up to 6 pages</div>
-                <div className="text-left py-1">
-                  ✅ Up to 5-6 section per page
-                </div>
-                <div className="text-left py-1">✅ Premium custom design</div>
-                <div className="text-left py-1">
-                  ✅ Advanced responsive design
-                </div>
-                <div className="text-left py-1">✅ SEO optimazation setup</div>
-                <div className="text-left py-1">✅ Blog or portfolio setup</div>
-                <div className="text-left py-1">
-                  ✅ Contact forms and integration
-                </div>
-                <div className="text-left py-1">
-                  ✅ Performance optimazation
-                </div>
-                <div className="text-left py-1">✅ Priority support</div>
-                <div className="text-left py-1">✅ 5 rounds of revision</div>
+          <h1
+            className="
+            text-5xl
+            font-bold"
+          >
+            Website Packages
+          </h1>
 
-                <div>
-                  <button
-                    onClick={scrollToContact}
-                    className="bg-blue-600 shadow-2xl py-2 px-4 rounded-2xl text-white text-lg hover:bg-blue-700 my-4"
-                  >
-                    Contact Us
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="pt-8 ">
-          <p className="text-lg">
-            Not sure which package fits your needs? Contact us for a custom
-            package tailored to your business.
+          <p
+            className="
+            mt-6
+
+            text-gray-500
+
+            max-w-3xl
+
+            mx-auto"
+          >
+            Flexible website packages designed for businesses at every stage.
           </p>
         </div>
-        <div className="pt-6 underline ">
-          <p className="hover:text-blue-700">Terms & Condition Apply</p>
+
+        {/* Cards */}
+
+        <div
+          className="
+          grid
+
+          lg:grid-cols-3
+
+          gap-10
+
+          mt-20"
+        >
+          {plans.map((plan, index) => (
+            <div
+              key={index}
+              className={`
+
+                relative
+
+                bg-white
+
+                rounded-3xl
+
+                p-8
+
+                shadow-xl
+
+                hover:-translate-y-3
+
+                transition
+
+                ${plan.popular ? "border-2 border-blue-500 scale-105" : ""}
+
+                `}
+            >
+              {plan.popular && (
+                <div
+                  className="
+                    absolute
+
+                    top-[-15px]
+
+                    left-1/2
+
+                    -translate-x-1/2
+
+                    bg-blue-600
+
+                    px-4
+
+                    py-2
+
+                    rounded-full
+
+                    text-white
+
+                    text-sm
+
+                    flex
+
+                    gap-2"
+                >
+                  <Star size={16} />
+                  Most Popular
+                </div>
+              )}
+
+              <h2
+                className="
+                  text-3xl
+
+                  font-bold"
+              >
+                {plan.name}
+              </h2>
+
+              <div
+                className="
+                  mt-6"
+              >
+                <span
+                  className="
+                    text-lg"
+                >
+                  R
+                </span>
+
+                <span
+                  className="
+                    text-6xl
+
+                    font-bold"
+                >
+                  {plan.price}
+                </span>
+              </div>
+
+              <div
+                className="
+                  mt-10
+
+                  space-y-5"
+              >
+                {plan.features.map((feature, i) => (
+                  <div
+                    key={i}
+                    className="
+                        flex
+
+                        gap-3"
+                  >
+                    <Check
+                      className="
+                          text-green-500"
+                      size={20}
+                    />
+
+                    <span>{feature}</span>
+                  </div>
+                ))}
+              </div>
+
+              <button
+                onClick={scrollToContact}
+                className="
+                  w-full
+
+                  mt-10
+
+                  py-4
+
+                  rounded-2xl
+
+                  bg-blue-600
+
+                  text-white
+
+                  font-semibold
+
+                  hover:bg-blue-700
+
+                  transition"
+              >
+                Get Started
+              </button>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom */}
+
+        <div
+          className="
+          text-center
+
+          mt-20"
+        >
+          <p
+            className="
+            text-gray-500"
+          >
+            Need something custom?
+          </p>
+
+          <button
+            onClick={scrollToContact}
+            className="
+            mt-6
+
+            underline
+
+            text-blue-500"
+          >
+            Request Custom Quote
+          </button>
         </div>
       </div>
     </section>

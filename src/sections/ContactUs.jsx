@@ -1,153 +1,413 @@
 ﻿import React, { useRef } from "react";
+
 import emailjs from "@emailjs/browser";
+
 import ourGoalsImage from "../images/contact-img.webp";
 
+import { Phone, Mail, MessageCircle, Building2, User } from "lucide-react";
+
 function ContactUs() {
-const form = useRef();
+  const form = useRef();
 
-const phoneNumber = "27704419275";
-const message = "Hello, I am interested in your service.";
-const encodedMessage = encodeURIComponent(message);
+  const phoneNumber = "27704419275";
 
-// 🚀 Send email function
-const sendEmail = (e) => {
-e.preventDefault();
+  const message = "Hello, I am interested in your services.";
 
+  const encodedMessage = encodeURIComponent(message);
 
-emailjs
-  .sendForm(
-    "service_pxbyoei",   
-    "template_07y8y71",  
-    form.current,
-    "jktgoyUav4uVzsRPr"    
-  )
-  .then(
-    () => {
-      alert("Message sent successfully ✅");
-      form.current.reset();
-    },
-    (error) => {
-      console.log(error);
-      alert("Failed to send ❌");
-    }
-  );
+  const sendEmail = (e) => {
+    e.preventDefault();
 
+    emailjs
 
-};
+      .sendForm(
+        "service_pxbyoei",
 
-return ( <section
-   id="contact"
-   className="bg-background-2 text-normal-text-2 py-10 px-4 text-center"
- > <div> <h1 className="text-4xl font-bold pb-3 text-heading-2">
-Contact Us </h1> <p className="text-xl max-w-2xl mx-auto text-sub-heading-2">
-Ready to grow your business online? Contact us today. </p> </div>
+        "template_07y8y71",
 
+        form.current,
 
-  <div className="flex flex-col md:flex-row justify-center gap-6 py-10">
+        "jktgoyUav4uVzsRPr",
+      )
 
-    {/* FORM */}
-    <form
-      ref={form}
-      onSubmit={sendEmail}
-      className="bg-slate-700 m-4 md:w-100 rounded-xl p-8 flex flex-col shadow-2xl"
+      .then(
+        () => {
+          alert("Message sent ✅");
+
+          form.current.reset();
+        },
+
+        () => {
+          alert("Failed ❌");
+        },
+      );
+  };
+
+  return (
+    <section
+      id="contact"
+      className="
+      py-28
+
+      bg-background-2
+
+      text-white"
     >
-      {/* Name */}
-      <span className="text-left text-heading-2">Name</span>
-      <input
-        type="text"
-        name="user_name"
-        placeholder="Full name"
-        className="bg-slate-900 rounded-xl p-2 px-3 mb-4"
-        required
-      />
+      <div
+        className="
+        max-w-7xl
 
-      {/* Email */}
-      <span className="text-left">Email</span>
-      <input
-        type="email"
-        name="user_email"
-        placeholder="youremail@gmail.com"
-        className="bg-slate-900 rounded-xl p-2 px-3 mb-4"
-        required
-      />
+        mx-auto
 
-      {/* Phone */}
-      <span className="text-left">Phone Number</span>
-      <input
-        type="text"
-        name="user_phone"
-        placeholder="071 234 5678"
-        className="bg-slate-900 rounded-xl p-2 px-3 mb-4"
-        required
-      />
-
-      {/* Company */}
-      <span className="text-left">Business Name</span>
-      <input
-        type="text"
-        name="company_name"
-        placeholder="Your business name"
-        className="bg-slate-900 rounded-xl p-2 px-3 mb-4"
-      />
-
-      {/* Message */}
-      <span className="text-left">Message</span>
-      <textarea
-        name="message"
-        placeholder="Your message..."
-        className="bg-slate-900 rounded-xl p-2 mb-4 min-h-32"
-        required
-      ></textarea>
-
-      {/* Submit */}
-      <button
-        type="submit"
-        className="bg-blue-700 p-3 rounded-xl hover:bg-blue-800 text-white"
+        px-6"
       >
-        Submit
-      </button>
-    </form>
+        {/* Heading */}
 
-    {/* CONTACT INFO */}
-    <div className="text-left mt-2">
-      <div className="pb-4">
-        <div className="text-xl font-semibold">📞 Call Us</div>
-        <p>070 441 9275</p>
-      </div>
+        <div
+          className="
+          text-center
 
-      <div className="pb-4">
-        <div className="text-xl font-semibold">📧 Email Us</div>
-        <p>xenobyte012@gmail.com</p>
-      </div>
-
-      <div>
-        <div className="text-xl font-semibold">Whatsapp Us</div>
-        <p>070 441 9275</p>
-
-        <a
-          href={`https://wa.me/${phoneNumber}?text=${encodedMessage}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-blue-600 px-5 py-3 text-white rounded-xl mt-3 hover:bg-blue-700"
+          mb-16"
         >
-          Let's chat
-        </a>
+          <div
+            className="
+            inline-block
+
+            px-5
+
+            py-2
+
+            rounded-full
+
+            bg-blue-500/10
+
+            text-blue-400
+
+            mb-5"
+          >
+            Contact Us
+          </div>
+
+          <h1
+            className="
+            text-5xl
+
+            md:text-6xl
+
+            font-bold"
+          >
+            Let's Build Your Next Website
+          </h1>
+
+          <p
+            className="
+            text-gray-400
+
+            mt-6
+
+            max-w-2xl
+
+            mx-auto"
+          >
+            Ready to grow your business online? Send a message and we'll discuss
+            your project.
+          </p>
+        </div>
+
+        <div
+          className="
+          grid
+
+          lg:grid-cols-2
+
+          gap-16"
+        >
+          {/* FORM */}
+
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="
+              bg-gray-900
+
+              p-8
+
+              rounded-3xl
+
+              shadow-2xl"
+          >
+            <h2
+              className="
+                  text-3xl
+
+                  font-bold
+
+                  mb-8"
+            >
+              Get A Free Quote
+            </h2>
+
+            <div
+              className="
+                  space-y-5"
+            >
+              <input
+                type="text"
+                name="user_name"
+                placeholder="Full Name"
+                required
+                className="
+                    w-full
+
+                    bg-black
+
+                    p-4
+
+                    rounded-xl
+
+                    border
+
+                    border-gray-700"
+              />
+
+              <input
+                type="email"
+                name="user_email"
+                placeholder="Email Address"
+                required
+                className="
+                    w-full
+
+                    bg-black
+
+                    p-4
+
+                    rounded-xl
+
+                    border
+
+                    border-gray-700"
+              />
+
+              <input
+                type="text"
+                name="user_phone"
+                placeholder="Phone Number"
+                required
+                className="
+                    w-full
+
+                    bg-black
+
+                    p-4
+
+                    rounded-xl
+
+                    border
+
+                    border-gray-700"
+              />
+
+              <input
+                type="text"
+                name="company_name"
+                placeholder="Business Name"
+                className="
+                    w-full
+
+                    bg-black
+
+                    p-4
+
+                    rounded-xl
+
+                    border
+
+                    border-gray-700"
+              />
+
+              <textarea
+                name="message"
+                required
+                placeholder="Tell us about your project..."
+                className="
+                    w-full
+
+                    min-h-40
+
+                    bg-black
+
+                    p-4
+
+                    rounded-xl
+
+                    border
+
+                    border-gray-700"
+              />
+
+              <button
+                type="submit"
+                className="
+                    w-full
+
+                    py-4
+
+                    rounded-xl
+
+                    bg-blue-600
+
+                    hover:bg-blue-700
+
+                    font-semibold
+
+                    transition"
+              >
+                Send Message
+              </button>
+            </div>
+
+            <p
+              className="
+                  text-gray-500
+
+                  mt-5
+
+                  text-sm"
+            >
+              Usually responds within a few hours.
+            </p>
+          </form>
+
+          {/* RIGHT SIDE */}
+
+          <div>
+            <img
+              src={ourGoalsImage}
+              alt="Website consultation"
+              className="
+                rounded-3xl
+
+                shadow-2xl
+
+                h-72
+
+                object-cover
+
+                w-full"
+            />
+
+            <div
+              className="
+                mt-10
+
+                space-y-8"
+            >
+              <div
+                className="
+                  flex
+
+                  gap-5"
+              >
+                <Phone
+                  className="
+                    text-blue-500"
+                />
+
+                <div>
+                  <h3
+                    className="
+                      font-bold"
+                  >
+                    Call Us
+                  </h3>
+
+                  <p>070 441 9275</p>
+                </div>
+              </div>
+
+              <div
+                className="
+                  flex
+
+                  gap-5"
+              >
+                <Mail
+                  className="
+                    text-blue-500"
+                />
+
+                <div>
+                  <h3
+                    className="
+                      font-bold"
+                  >
+                    Email
+                  </h3>
+
+                  <p>xenobyte012@gmail.com</p>
+                </div>
+              </div>
+
+              <div
+                className="
+                  flex
+
+                  gap-5"
+              >
+                <Building2
+                  className="
+                    text-blue-500"
+                />
+
+                <div>
+                  <h3
+                    className="
+                      font-bold"
+                  >
+                    Business
+                  </h3>
+
+                  <p>Xenobyte Web Studio</p>
+                </div>
+              </div>
+
+              <a
+                href={`https://wa.me/${phoneNumber}?text=${encodedMessage}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  flex
+
+                  items-center
+
+                  justify-center
+
+                  gap-3
+
+                  mt-8
+
+                  bg-green-600
+
+                  hover:bg-green-700
+
+                  px-8
+
+                  py-4
+
+                  rounded-xl
+
+                  transition"
+              >
+                <MessageCircle />
+                Chat On WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div className="h-85 mt-6 overflow-hidden">
-        <img
-          src={ourGoalsImage}
-          alt="contact"
-          className="object-cover rounded-xl shadow-2xl h-full w-full"
-        />
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-);
+    </section>
+  );
 }
 
 export default ContactUs;
