@@ -32,7 +32,7 @@ function Footer() {
 
           <ul className="space-y-3">
             <li>
-              <Link to="/" className="hover:text-blue-500 transition">
+              <Link to="#home" className="hover:text-blue-500 transition">
                 Home
               </Link>
             </li>
