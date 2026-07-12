@@ -1,72 +1,187 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
+
+  <!-- Character Encoding -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Xenobyte Web Studio – Web Design in Rustenburg, South Africa</title>
-  <meta name="description" content="Build a professional website that attracts customers. Xenobyte Web Studio creates custom, fast, mobile-friendly sites for businesses in Rustenburg.">
-  <meta name="keywords" content="web design Rustenburg, South Africa, custom websites, responsive design, local SEO">
+  <!-- Mobile Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Theme -->
+  <meta name="theme-color" content="#0099ff">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- Title -->
+  <title>
+    Xenobyte Web Studio | Professional Web Design & Development in South Africa
+  </title>
+
+  <!-- SEO -->
+  <meta
+    name="description"
+    content="Xenobyte Web Studio builds modern, fast, mobile-friendly websites for businesses across South Africa. We specialize in React websites, custom web development, SEO optimization, landing pages, portfolios, and business websites that help attract more customers."
+  >
+
+  <meta
+    name="keywords"
+    content="Web Design South Africa, Rustenburg Web Design, Website Developer South Africa, React Developer, Tailwind CSS, Business Websites, Ecommerce Websites, Portfolio Websites, Landing Pages, SEO Services, Web Development Rustenburg"
+  >
+
   <meta name="author" content="Xenobyte Web Studio">
-  <meta name="robots" content="index,follow">
 
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <meta name="language" content="English">
+
+  <!-- Geo -->
+  <meta name="geo.region" content="ZA-NW">
+  <meta name="geo.placename" content="Rustenburg">
+
+  <!-- Canonical -->
   <link rel="canonical" href="https://xenobytewebstudio.co.za/">
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://xenobytewebstudio.co.za/sitemap.xml">
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:title"       content="Xenobyte Web Studio – Web Design in Rustenburg">
-  <meta property="og:description" content="Professional, mobile-friendly web design and SEO services for local businesses in Rustenburg. Build a site that converts visitors to customers.">
-  <meta property="og:type"        content="website">
-  <meta property="og:url"         content="https://xenobytewebstudio.co.za/">
-  <meta property="og:image"       content="https://xenobytewebstudio.co.za/og-image.jpg">
-  <meta property="og:site_name"   content="Xenobyte Web Studio">
-  <meta property="og:locale"      content="en_ZA">
+  <!-- Sitemap -->
+  <link
+    rel="sitemap"
+    type="application/xml"
+    title="Sitemap"
+    href="https://xenobytewebstudio.co.za/sitemap.xml"
+  >
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="Xenobyte Web Studio – Web Design in Rustenburg">
-  <!-- (Removed twitter:description to avoid duplication) -->
-  <meta name="twitter:image"       content="https://xenobytewebstudio.co.za/og-image.jpg">
-  <meta name="twitter:site"        content="@XenobyteStudio">
+  <!-- Icons -->
+  <link rel="icon" href="/logo.webp" type="image/webp">
+  <link rel="apple-touch-icon" href="/logo.webp" sizes="60x60" >
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+
+  <meta
+    property="og:title"
+    content="Professional Website Design | Xenobyte Web Studio"
+  >
+
+  <meta
+    property="og:description"
+    content="Modern websites designed to help businesses grow online and generate more customers."
+  >
+
+  <meta
+    property="og:url"
+    content="https://xenobytewebstudio.co.za/"
+  >
+
+  <meta
+    property="og:image"
+    content="https://xenobytewebstudio.co.za/xenobyte-web-studio-log-full.svg"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="Xenobyte Web Studio Logo"
+  >
+
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta property="og:site_name" content="Xenobyte Web Studio">
+
+  <meta property="og:locale" content="en_ZA">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta
+    name="twitter:title"
+    content="Professional Website Design | Xenobyte Web Studio"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Helping businesses grow online with fast, modern websites."
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://xenobytewebstudio.co.za/xenobyte-web-studio-log-full.svg"
+  >
+
+  <meta name="twitter:creator" content="@XenobyteStudio">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Xenobyte Web Studio",
-    "description": "Professional web design and SEO services for local businesses in Rustenburg.",
-    "url": "https://xenobytewebstudio.co.za",
-    "telephone": "+27704419275",
-    "email": "contact@xenobytewebstudio.co.za",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Malateng Street",
-      "addressLocality": "Pretoria",
-      "addressRegion": "Gauteng",
-      "postalCode": "0184",
-      "addressCountry": "ZA"
+    "@context":"https://schema.org",
+    "@type":"ProfessionalService",
+    "name":"Xenobyte Web Studio",
+    "url":"https://xenobytewebstudio.co.za",
+    "logo":"https://xenobytewebstudio.co.za/logo.webp",
+    "image":"https://xenobytewebstudio.co.za/logo.webp",
+    "description":"Professional website design, web development and SEO services in South Africa.",
+
+    "telephone":"+27704419275",
+
+    "email":"contact@xenobytewebstudio.co.za",
+
+    "priceRange":"R",
+
+    "address":{
+      "@type":"PostalAddress",
+      "addressLocality":"Rustenburg",
+      "addressRegion":"North West",
+      "addressCountry":"ZA"
     },
-    "areaServed": {"@type": "City", "name": "Rustenburg"},
-    "sameAs": [
+
+    "areaServed":[
+      "Rustenburg",
+      "Johannesburg",
+      "Pretoria",
+      "South Africa"
+    ],
+
+    "openingHoursSpecification":[
+      {
+        "@type":"OpeningHoursSpecification",
+        "dayOfWeek":[
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens":"08:00",
+        "closes":"17:00"
+      }
+    ],
+
+    "sameAs":[
       "https://www.facebook.com/XenobyteWebStudio",
       "https://www.instagram.com/xenobytewebstudio",
       "https://www.tiktok.com/@xenobyte.web.studio"
-              target="_blank""
     ]
   }
   </script>
 
-  <!-- Fonts & Favicon -->
-  <link rel="icon" type="image/png" href="/logo.webp">
-  <!-- (keep Google Fonts preconnects/links) -->
-  <script type="module" crossorigin src="/assets/index-9SoHsr1H.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-yo7vXPaB.css">
+  <script type="module" crossorigin src="/assets/index-CcRoftBw.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-OAaus0Ak.css">
 </head>
 
-  <body>
-    <div id="root"></div>
+<body>
 
-    <!-- React Source Injection (Processed by Vite Builder) -->
-  </body>
-</html> remove the twitter discription and add tiktok and more details to get the best seo ranking and it must be high conventoing 
+<div id="root"></div>
+
+
+</body>
+</html>
