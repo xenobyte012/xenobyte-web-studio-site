@@ -262,6 +262,9 @@ function ContactUs() {
                     font-semibold
 
                     transition"
+                onClick={() => {
+                  fbq("track", "Lead");
+                }}
               >
                 Send Message
               </button>
@@ -315,14 +318,17 @@ function ContactUs() {
                 />
 
                 <div>
-                  <h3
-                    className="
-                      font-bold"
-                  >
-                    Call Us
-                  </h3>
+                  <h3 className="font-bold">Call Us</h3>
 
-                  <p>070 441 9275</p>
+                  <a
+                    href="tel:+27704419275"
+                    className="text-blue-600 hover:underline"
+                    onClick={() => {
+                      fbq("track", "Lead");
+                    }}
+                  >
+                    070 441 9275
+                  </a>
                 </div>
               </div>
 
@@ -398,6 +404,9 @@ function ContactUs() {
                   rounded-xl
 
                   transition"
+                onClick={() => {
+                  fbq("track", "Whats App");
+                }}
               >
                 <MessageCircle />
                 Chat On WhatsApp

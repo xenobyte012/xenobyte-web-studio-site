@@ -197,6 +197,9 @@ function RecentProjects() {
                     gap-2
                     text-blue-500
                     font-semibold"
+                    onClick={() => {
+                      fbq("track", "View Project");
+                    }}
                   >
                     View Project
                     <ArrowRight size={18} />
@@ -257,6 +260,9 @@ function RecentProjects() {
                 text-blue-500
                 flex
                 gap-2"
+                  onClick={() => {
+                    fbq("track", "View Project");
+                  }}
                 >
                   View Project
                   <ArrowRight size={18} />
@@ -374,6 +380,9 @@ function RecentProjects() {
                     gap-2
                     text-blue-500
                     font-semibold"
+                      onClick={() => {
+                        fbq("track", "View Project");
+                      }}
                     >
                       View Project
                       <ArrowRight size={18} />
@@ -382,8 +391,6 @@ function RecentProjects() {
                 </div>
               </a>
             ))}
-
-
           </div>
         )}
       </div>

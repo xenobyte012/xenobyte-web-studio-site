@@ -90,7 +90,6 @@ function HeroSection() {
         font-bold
         leading-tight
         max-w-4xl"
-        
         >
           Build a Website That Turns Visitors Into
           <span className="text-blue-500"> Paying Customers</span>
@@ -139,6 +138,9 @@ function HeroSection() {
             font-semibold
             transition
             hover:scale-105"
+            onClick={() => {
+              fbq("track", "Whats App");
+            }}
           >
             <FaWhatsapp size={28} />
             WhatsApp Us
@@ -157,6 +159,9 @@ function HeroSection() {
             font-semibold
             transition
             hover:scale-105"
+            onClick={() => {
+              fbq("track", "Lead");
+            }}
           >
             Book Free Consultation
           </button>

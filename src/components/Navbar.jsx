@@ -5,7 +5,11 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = ["Home", "Packages", "About", "Contact"];
+const handleQuote = () => {
+  fbq("track", "Lead");
 
+  // Your existing code
+};
   return (
     <>
       {/* Desktop Navbar */}
@@ -95,6 +99,7 @@ function Navbar() {
           hover:bg-blue-700
 
           transition"
+          onClick={handleQuote}
         >
           Get Started
         </a>
@@ -238,6 +243,7 @@ function Navbar() {
             text-center
 
             mt-4"
+            onClick={handleQuote}
           >
             Get Started
           </a>
