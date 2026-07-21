@@ -29,9 +29,13 @@ function ContactUs() {
 
         "jktgoyUav4uVzsRPr",
       )
-
       .then(
         () => {
+          // Track a successful lead
+          if (window.fbq) {
+            window.fbq("track", "Lead");
+          }
+
           alert("Message sent ✅");
 
           form.current.reset();
@@ -249,22 +253,13 @@ function ContactUs() {
               <button
                 type="submit"
                 className="
-                    w-full
-
-                    py-4
-
-                    rounded-xl
-
-                    bg-blue-600
-
-                    hover:bg-blue-700
-
-                    font-semibold
-
-                    transition"
-                onClick={() => {
-                  fbq("track", "Lead");
-                }}
+    w-full
+    py-4
+    rounded-xl
+    bg-blue-600
+    hover:bg-blue-700
+    font-semibold
+    transition"
               >
                 Send Message
               </button>
@@ -316,7 +311,6 @@ function ContactUs() {
                   className="
                     text-blue-500"
                 />
-
                 <div>
                   <h3 className="font-bold">Call Us</h3>
 
@@ -324,7 +318,9 @@ function ContactUs() {
                     href="tel:+27704419275"
                     className="text-blue-600 hover:underline"
                     onClick={() => {
-                      fbq("track", "Lead");
+                      if (window.fbq) {
+                        window.fbq("track", "Contact");
+                      }
                     }}
                   >
                     070 441 9275
@@ -351,7 +347,17 @@ function ContactUs() {
                     Email
                   </h3>
 
-                  <p>xenobyte012@gmail.com</p>
+                  <a
+                    href="mailto:xenobytewebstudio@gmail.com"
+                    className="text-blue-600 hover:underline"
+                    onClick={() => {
+                      if (window.fbq) {
+                        window.fbq("track", "Contact");
+                      }
+                    }}
+                  >
+                    xenobytewebstudio@gmail.com
+                  </a>
                 </div>
               </div>
 
@@ -405,7 +411,9 @@ function ContactUs() {
 
                   transition"
                 onClick={() => {
-                  fbq("track", "Whats App");
+                  if (window.fbq) {
+                    window.fbq("track", "Contact");
+                  }
                 }}
               >
                 <MessageCircle />

@@ -5,11 +5,12 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = ["Home", "Packages", "About", "Contact"];
-const handleQuote = () => {
-  fbq("track", "Lead");
+  const handleQuote = () => {
+    if (window.fbq) {
+      window.fbq("track", "Lead");
+    }
+  };
 
-  // Your existing code
-};
   return (
     <>
       {/* Desktop Navbar */}
@@ -231,19 +232,18 @@ const handleQuote = () => {
 
           <a
             href="#contact"
-            onClick={() => setIsOpen(false)}
+            onClick={() => {
+              handleQuote();
+              setIsOpen(false);
+            }}
             className="
-            bg-blue-600
-
-            px-6
-            py-4
-
-            rounded-xl
-
-            text-center
-
-            mt-4"
-            onClick={handleQuote}
+                bg-blue-600
+                px-6
+                py-4
+                rounded-xl
+                text-center
+                mt-4
+              "
           >
             Get Started
           </a>

@@ -198,7 +198,9 @@ function RecentProjects() {
                     text-blue-500
                     font-semibold"
                     onClick={() => {
-                      fbq("track", "View Project");
+                      if (window.fbq) {
+                        window.fbq("track", "View Project");
+                      }
                     }}
                   >
                     View Project
@@ -261,7 +263,9 @@ function RecentProjects() {
                 flex
                 gap-2"
                   onClick={() => {
-                    fbq("track", "View Project");
+                    if (window.fbq) {
+                      window.fbq("track", "View Project");
+                    }
                   }}
                 >
                   View Project
@@ -381,7 +385,9 @@ function RecentProjects() {
                     text-blue-500
                     font-semibold"
                       onClick={() => {
-                        fbq("track", "View Project");
+                        if (window.fbq) {
+                          window.fbq("track", "View Project");
+                        }
                       }}
                     >
                       View Project
