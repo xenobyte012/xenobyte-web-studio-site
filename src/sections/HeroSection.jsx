@@ -149,6 +149,7 @@ function HeroSection() {
           {/* Contact */}
 
           <button
+            href="#contact"
             onClick={scrollToContact}
             className="
             bg-blue-600
