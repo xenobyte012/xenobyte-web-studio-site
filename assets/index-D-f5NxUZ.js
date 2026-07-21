@@ -65,7 +65,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
             rounded-xl\r
             font-semibold\r
             transition\r
-            hover:scale-105`,onClick:()=>{fbq(`track`,`Whats App`)},children:[(0,M.jsx)(cr,{size:28}),`WhatsApp Us`]}),(0,M.jsx)(`button`,{onClick:()=>{let e=document.getElementById(`contact`);e&&e.scrollIntoView({behavior:`smooth`})},className:`\r
+            hover:scale-105`,onClick:()=>{fbq(`track`,`Whats App`)},children:[(0,M.jsx)(cr,{size:28}),`WhatsApp Us`]}),(0,M.jsx)(`button`,{href:`#contact`,onClick:()=>{let e=document.getElementById(`contact`);e&&e.scrollIntoView({behavior:`smooth`})},className:`\r
             bg-blue-600\r
             hover:bg-blue-700\r
             px-8\r
@@ -1000,4 +1000,4 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
 \r
                   rounded-xl\r
 \r
-                  transition`,onClick:()=>{fbq(`track`,`Whats App`)},children:[(0,M.jsx)(jr,{}),`Chat On WhatsApp`]})]})]})]})]})})}function Ni(){return(0,M.jsxs)(`div`,{className:``,children:[(0,M.jsx)(Hr,{}),(0,M.jsx)(pr,{}),(0,M.jsx)(Jr,{}),(0,M.jsx)($r,{}),(0,M.jsx)(ei,{}),(0,M.jsx)(ci,{}),(0,M.jsx)(li,{}),(0,M.jsx)(oi,{}),(0,M.jsx)(Mi,{}),(0,M.jsx)(ai,{})]})}var Pi=(0,_.lazy)(()=>ee(()=>import(`./barber-website-5Z37l_Qa.js`),[]));function Fi(){return(0,M.jsx)(`div`,{className:`w-full overflow-x-hidden h-screen`,children:(0,M.jsxs)(Rt,{children:[(0,M.jsx)(It,{path:`/`,element:(0,M.jsx)(Ni,{})}),(0,M.jsx)(It,{path:`/barber`,element:(0,M.jsx)(Pi,{})})]})})}(0,v.createRoot)(document.getElementById(`root`)).render((0,M.jsx)(En,{children:(0,M.jsx)(Fi,{})}));export{c as i,fr as n,u as r,ai as t};
+                  transition`,onClick:()=>{fbq(`track`,`Whats App`)},children:[(0,M.jsx)(jr,{}),`Chat On WhatsApp`]})]})]})]})]})})}function Ni(){return(0,M.jsxs)(`div`,{className:``,children:[(0,M.jsx)(Hr,{}),(0,M.jsx)(pr,{}),(0,M.jsx)(Jr,{}),(0,M.jsx)($r,{}),(0,M.jsx)(ei,{}),(0,M.jsx)(ci,{}),(0,M.jsx)(li,{}),(0,M.jsx)(oi,{}),(0,M.jsx)(Mi,{}),(0,M.jsx)(ai,{})]})}var Pi=(0,_.lazy)(()=>ee(()=>import(`./barber-website-9qZHbtJb.js`),[]));function Fi(){return(0,M.jsx)(`div`,{className:`w-full overflow-x-hidden h-screen`,children:(0,M.jsxs)(Rt,{children:[(0,M.jsx)(It,{path:`/`,element:(0,M.jsx)(Ni,{})}),(0,M.jsx)(It,{path:`/barber`,element:(0,M.jsx)(Pi,{})})]})})}(0,v.createRoot)(document.getElementById(`root`)).render((0,M.jsx)(En,{children:(0,M.jsx)(Fi,{})}));export{c as i,fr as n,u as r,ai as t};
