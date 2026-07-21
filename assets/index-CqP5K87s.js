@@ -791,7 +791,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
 \r
           lg:grid-cols-2\r
 \r
-          gap-16`,children:[(0,M.jsxs)(`form`,{ref:e,onSubmit:t=>{t.preventDefault(),Ai.sendForm(`service_pxbyoei`,`template_07y8y71`,e.current,`jktgoyUav4uVzsRPr`).then(()=>{window.fbq&&window.fbq(`track`,`Lead`),alert(`Message sent ✅`),e.current.reset()},()=>{alert(`Failed ❌`)})},className:`\r
+          gap-16`,children:[(0,M.jsxs)(`form`,{ref:e,onSubmit:t=>{t.preventDefault(),Ai.sendForm(`service_yc49w6r`,`template_07y8y71`,e.current,`jktgoyUav4uVzsRPr`).then(()=>{window.fbq&&window.fbq(`track`,`Lead`),alert(`Message sent ✅`),e.current.reset()},()=>{alert(`Failed ❌`)})},className:`\r
               bg-gray-900\r
 \r
               p-8\r
@@ -920,4 +920,4 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
 \r
                   rounded-xl\r
 \r
-                  transition`,onClick:()=>{window.fbq&&window.fbq(`track`,`Contact`)},children:[(0,M.jsx)(jr,{}),`Chat On WhatsApp`]})]})]})]})]})})}function Ni(){return(0,M.jsxs)(`div`,{className:``,children:[(0,M.jsx)(Hr,{}),(0,M.jsx)(pr,{}),(0,M.jsx)(Jr,{}),(0,M.jsx)($r,{}),(0,M.jsx)(ei,{}),(0,M.jsx)(ci,{}),(0,M.jsx)(li,{}),(0,M.jsx)(oi,{}),(0,M.jsx)(Mi,{}),(0,M.jsx)(ai,{})]})}var Pi=(0,_.lazy)(()=>ee(()=>import(`./barber-website-DP8acD2s.js`),[]));function Fi(){return(0,M.jsx)(`div`,{className:`w-full overflow-x-hidden h-screen`,children:(0,M.jsxs)(Rt,{children:[(0,M.jsx)(It,{path:`/`,element:(0,M.jsx)(Ni,{})}),(0,M.jsx)(It,{path:`/barber`,element:(0,M.jsx)(Pi,{})})]})})}(0,v.createRoot)(document.getElementById(`root`)).render((0,M.jsx)(En,{children:(0,M.jsx)(Fi,{})}));export{c as i,fr as n,u as r,ai as t};
+                  transition`,onClick:()=>{window.fbq&&window.fbq(`track`,`Contact`)},children:[(0,M.jsx)(jr,{}),`Chat On WhatsApp`]})]})]})]})]})})}function Ni(){return(0,M.jsxs)(`div`,{className:``,children:[(0,M.jsx)(Hr,{}),(0,M.jsx)(pr,{}),(0,M.jsx)(Jr,{}),(0,M.jsx)($r,{}),(0,M.jsx)(ei,{}),(0,M.jsx)(ci,{}),(0,M.jsx)(li,{}),(0,M.jsx)(oi,{}),(0,M.jsx)(Mi,{}),(0,M.jsx)(ai,{})]})}var Pi=(0,_.lazy)(()=>ee(()=>import(`./barber-website-DkDdMZAJ.js`),[]));function Fi(){return(0,M.jsx)(`div`,{className:`w-full overflow-x-hidden h-screen`,children:(0,M.jsxs)(Rt,{children:[(0,M.jsx)(It,{path:`/`,element:(0,M.jsx)(Ni,{})}),(0,M.jsx)(It,{path:`/barber`,element:(0,M.jsx)(Pi,{})})]})})}(0,v.createRoot)(document.getElementById(`root`)).render((0,M.jsx)(En,{children:(0,M.jsx)(Fi,{})}));export{c as i,fr as n,u as r,ai as t};
