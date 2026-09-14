@@ -30,7 +30,7 @@ function RecentProjects() {
     {
       title: "Appliance Repair",
       image: applience_img,
-      link: "https://xenobyte012.github.io/k-k-appliance-repair-site/",
+      link: "https://kelvinappliancesarepair.co.za",
       desc: "Local repair business website",
       external: true,
     },
