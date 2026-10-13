@@ -12,7 +12,7 @@ function Packages() {
     {
       name: "Bronze",
 
-      price: "1000",
+      price: "1500",
 
       popular: false,
 
@@ -38,7 +38,7 @@ function Packages() {
     {
       name: "Silver",
 
-      price: "2000",
+      price: "2500",
 
       popular: true,
 
@@ -64,7 +64,7 @@ function Packages() {
     {
       name: "Gold",
 
-      price: "3000",
+      price: "3500",
 
       popular: false,
 
