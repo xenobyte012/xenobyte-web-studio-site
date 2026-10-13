@@ -10,9 +10,17 @@ import { ArrowRight, ExternalLink } from "lucide-react";
 
 function RecentProjects() {
   const navigate = useNavigate();
-  const [seeMore, setSeeMore] = useState(false);
+  // const [seeMore, setSeeMore] = useState(false);
 
   const projects = [
+    {
+      title: "Kaytees Top Electrical",
+      image:
+        "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=800",
+      link: "https://kayteestopelect.co.za/",
+      desc: "Professional electrical services website",
+      external: true,
+    },
     {
       title: "Construction Company",
       image: construction_img,
@@ -52,7 +60,6 @@ function RecentProjects() {
       title: "School website",
       image:
         "https://xenobyte012.github.io/tsholofelo-technical-school-site/assets/logo-CSBDdZRq.jpg",
-
       link: "https://xenobyte012.github.io/tsholofelo-technical-school-site/",
       desc: "School website",
       external: true,
@@ -61,14 +68,11 @@ function RecentProjects() {
       title: "DC Solar & Lithium",
       image:
         "https://xenobyte012.github.io/dc-solar-lithium-site/assets/main-img-Bvug_gBN.jpg",
-
       link: "https://xenobyte012.github.io/dc-solar-lithium-site/",
       desc: "Professional solar panel installations website",
       external: true,
     },
   ];
-
-  
 
   const trackView = (e) => {
     e.stopPropagation();
